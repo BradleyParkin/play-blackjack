@@ -7,3 +7,17 @@ body {
     height: 100%;
     width: 100%;
 }
+
+button {
+    color: white;
+    width: 150px;
+    background: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    margin-top: 2px;
+
+}
