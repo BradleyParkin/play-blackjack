@@ -24,3 +24,9 @@ function beginGame() {
     textElement.textContent = textOutput
 }
 
+function throwNewCard() {
+    let card = 5
+    sum += card
+    beginGame
+}
+
