@@ -10,7 +10,7 @@ let scoreElement = document.getElementById("score-element")
 let handsElement = document.getElementById("hands-element")
 
 function produceRandom() {
-    return 5
+    return Math.floor( Math.random()*13 ) + 1
 }
 
 function beginGame() {
