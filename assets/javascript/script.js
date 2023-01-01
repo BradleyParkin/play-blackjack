@@ -8,8 +8,11 @@ let textElement = document.getElementById("text-element")
 let scoreElement = document.getElementById("score-element")
 let handsElement = document.getElementById("hands-element")
 
-
 function beginGame() {
+    showGame()
+}
+
+function showGame() {
     handsElement.textContent = "Hands: " + firstCard + " " + secondCard
     scoreElement.textContent = "Your Total Score: " + sum
     if (sum < 21) {
@@ -27,6 +30,6 @@ function beginGame() {
 function throwNewCard() {
     let card = 5
     sum += card
-    beginGame
+    showGame()
 }
 
