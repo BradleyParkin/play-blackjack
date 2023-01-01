@@ -10,7 +10,14 @@ let scoreElement = document.getElementById("score-element")
 let handsElement = document.getElementById("hands-element")
 
 function produceRandom() {
-    return Math.floor( Math.random()*13 ) + 1
+    let randomNumber = Math.floor( Math.random()*13 ) + 1
+    if (randomNumber > 10) {
+        return 10
+    } else if (randomNumber === 1) {
+        return 11
+    } else {
+        return randomNumber
+    }
 }
 
 function beginGame() {
