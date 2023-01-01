@@ -1,108 +1,73 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Can you beat the dealer? Blackjack!
 
-Welcome BradleyParkin,
+This blackjack game is a game played where the user is given 2 cards at random, and then has the option to draw a new card with the chance of getting 21. If the users go over 21 they bust. They then have to restart the game.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Responsive image](/assets/images/responsive.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+# Features
+* Top of the page
+    * The page has a question asking the user "Can you beat the dealer?" Just to grab the interest of the user to see if they can get 21.
+    * There are then the rules of the game, which are simple in that the user has to get 21 to beat the dealer, if they go over 21 they are bust and have to start again.
 
-## Gitpod Reminders
+![top off the page image](/assets/images/top%20of%20page.png)   
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* Main Game
+    * At the top of the page some text will tell the user whether they have bust, need to choose another card or in fact, they have won and got blackjack.
+    * There is then the hand's text, which shows the user the hands that have been generated, but also the extra hands that appear when the user asks for a new card.
+    * There is also the score, which is the total sum of all cards shown to give the user their total score. 
 
-`python3 -m http.server`
+![main game image](/assets/images/main%20game.png)
 
-A blue button should appear to click: _Make Public_,
+* Buttons
+    * There are two buttons the user can press to play the game, the first being the START button, this will automatically generate the user 2 random cards.
+    * The second button is if the user wants to play as their sum is not a total of 21, they can request another card.
 
-Another blue button should appear to click: _Open Browser_.
+![buttons image](/assets/images/buttons.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# Accessability
 
-A blue button should appear to click: _Make Public_,
+* I have chosen to use contrasting colors that make it easy for the user to see, these are Green, White, and Black. I felt these stand out the easiest on all screen sizes. 
+* I have also chosen to use a simple font for all the text to make this easy for the reader to stand out. 
 
-Another blue button should appear to click: _Open Browser_.
+![accessability](/assets/images/accessability.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+# Testing
 
-To log into the Heroku toolbelt CLI:
+* I have tested the game on multiple different browsers including Google, Firefox, and Safari. It has also been tested on multiple different devices for responsiveness including an iPhone 12 Pro Max and an Ipad Pro 12.9inch.
+* I confirm this project is responsive, looks clear to the user, and functions on all standard screen sizes using the dev tools device bar on Google Chrome.
+* I can confirm the buttons work to generate random cards. Once the user hits 21 or bust, they will no longer be able to request any more cards and will have to start the game again.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+# Bugs
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* The bug I was getting is the cards that are generated were showing up twice on my game, but I then realized I had entered the cards array twice, both on a function and the for loop showing them twice. Once this was removed the bug was fixed.
 
-------
+# Validator Testing
+* **HTML**
+    * No errors were found when passing through the official W3C HTML Validator
+* **CSS**
+    * No errors were found when passing through the official W3C CSS Validator
+* **Javascript**
+    * No significant issues were found when passing through the official JSHINT Validator
 
-## Release History
+# Deployment
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* The site was deployed to GitHub pages. The steps to deploy the site are:
+    * In the GitHub repository, go to the Settings tab
+    * From the source section drop-down menu, select Main Branch
+    * Once the main branch has been selected, the page will provide the link to the completed website.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+The live link can be found [here](https://bradleyparkin.github.io/play-blackjack/)      
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+# Credits
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Content
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+* W3Schools for if statements. https://www.w3schools.com/js/js_if_else.asp
+* Stack Overflow for Boolean/Logical Operators. https://stackoverflow.com/questions/20591876/why-are-logical-operators-in-javascript-left-associative
+* W3Schools for how to properly use a function. https://www.w3schools.com/js/js_functions.asp
+* w3Schools helped me understand the math. random and how to use it. https://www.w3schools.com/js/js_random.asp
+* Code Institute on how to use an array - but also used this site for help on an empty array and how to push to an array. https://www.scaler.com/topics/empty-array-in-javascript/
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Media
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+* Google fonts for fonts used https://fonts.google.com/
