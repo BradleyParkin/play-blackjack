@@ -4,11 +4,13 @@ let sum = firstCard + secondCard
 let blackJackWinner = false
 let playerNoBlackJack = true
 let textOutput = ""
-let messageElement = document.getElementById("message-element")
+let textElement = document.getElementById("text-element")
 let scoreElement = document.getElementById("score-element")
+let handsElement = document.getElementById("hands-element")
 
 
 function beginGame() {
+    handsElement.textContent = "Hands: " + firstCard + " " + secondCard
     scoreElement.textContent = "Your Total Score: " + sum
     if (sum < 21) {
         textOutput = "Are you going to risk a new card?"
@@ -19,6 +21,6 @@ function beginGame() {
         textOutput = "Ooooo! Unlucky this time! You're bust! Play Again?"
         playerNoBlackJack = false
     }  
-    messageElement.textContent = textOutput
+    textElement.textContent = textOutput
 }
 
