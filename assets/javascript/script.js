@@ -1,9 +1,7 @@
-let firstCard = produceRandom()
-let secondCard = produceRandom()
-let cardsTogether = [firstCard, secondCard] // array - ordered list of cards
-let sum = firstCard + secondCard
+let cardsTogether = [] // array - ordered list of cards
+let sum = 0
 let blackJackWinner = false
-let playerNoBlackJack = true
+let playerNoBlackJack = false
 let textOutput = ""
 let textElement = document.getElementById("text-element")
 let scoreElement = document.getElementById("score-element")
@@ -21,6 +19,11 @@ function produceRandom() {
 }
 
 function beginGame() {
+    playerNoBlackJack = true
+    let firstCard = produceRandom()
+    let secondCard = produceRandom()
+    cardsTogether = [firstCard, secondCard]
+    sum = firstCard + secondCard
     showGame()
 }
 
@@ -44,10 +47,12 @@ function showGame() {
 }
 
 function throwNewCard() {
-    let card = produceRandom()
-    sum += card
-    cardsTogether.push(card)
-    console.log(cardsTogether)
-    showGame()
+    if (playerNoBlackJack === true && blackJackWinner === false) {
+        let card = produceRandom()
+        sum += card
+        cardsTogether.push(card)
+        console.log(cardsTogether)
+        showGame()
+    }   
 }
 
