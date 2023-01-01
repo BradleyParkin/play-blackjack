@@ -39,7 +39,7 @@ function showGame() {
     } else if (sum === 21) {
         textOutput = "OMG! You got blackjack! How lucky! Play again?"
         blackJackWinner = true
-    } else if (sum > 21) {
+    } else {
         textOutput = "Ooooo! Unlucky this time! You're bust! Play Again?"
         playerNoBlackJack = false
     }  
