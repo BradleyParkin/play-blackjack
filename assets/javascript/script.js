@@ -1,5 +1,6 @@
 let firstCard = 11
 let secondCard = 10
+let cardsTogether = [firstCard, secondCard] // array - ordered list of cards
 let sum = firstCard + secondCard
 let blackJackWinner = false
 let playerNoBlackJack = true
@@ -13,8 +14,12 @@ function beginGame() {
 }
 
 function showGame() {
-    handsElement.textContent = "Hands: " + firstCard + " " + secondCard
+    handsElement.textContent = "Hands: " 
+    for (let i = 0; i < cardsTogether.length; i++) {
+        handsElement.textContent += cardsTogether[i] + " "
+    } 
     scoreElement.textContent = "Your Total Score: " + sum
+
     if (sum < 21) {
         textOutput = "Are you going to risk a new card?"
     } else if (sum === 21) {
@@ -30,6 +35,8 @@ function showGame() {
 function throwNewCard() {
     let card = 5
     sum += card
+    cardsTogether.push(card)
+    console.log(cardsTogether)
     showGame()
 }
 
