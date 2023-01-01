@@ -8,21 +8,27 @@
     <title>Can you beat the dealer?</title>
 </head>
 <body>
+    <!--- this section is for the rules of the game and main intro -->
     <section>
         <h1>Can you beat the dealer?</h1>
         <p>The rules of the game are simple</p>
         <p>All you have to do is beat the dealer by getting a score of 21.</p>
         <p>If you go over, you are bust!</p>
     </section>
+    <!-- this section here is the text that changes depending on the user score-->
     <section>
         <h2 id="text-element">Are you ready to play a round?</h2>
     </section>
     <section>
+        <!-- the hands element is what shows the user the hands that have be produced-->
         <h2 id="hands-element">Hands:</h2>
+        <!-- the score element is the total hands added up to see if they come to 21 or not-->
         <h2 id="score-element">Your Total Score:</h2>
     </section>
     <section>
+        <!-- the being game button is the button for the user to start the game-->
         <button onclick="beginGame()">Press to Start! If you dare!</button>
+        <!-- the thrownewcard button is for the user to get another card -->
         <button onclick="throwNewCard()">Dare to take a new card?</button>
     </section>
     <script src="./assets/javascript/script.js" ></script>
