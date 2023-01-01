@@ -4,6 +4,7 @@ let sum = firstCard + secondCard
 let blackJackWinner = false
 let playerNoBlackJack = true
 let textOutput = ""
+let messageElement = document.getElementById("message-element")
 
 
 function beginGame() {
@@ -16,6 +17,6 @@ function beginGame() {
         textOutput = "Ooooo! Unlucky this time! You're bust!"
         playerNoBlackJack = false
     }  
-    console.log(textOutput)
+    messageElement.textContent = textOutput
 }
 
